@@ -13,6 +13,8 @@ app = Flask(__name__)
 # Ensure templates are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
+db = SQL("sqlite:///anatech.db")
+
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -25,6 +27,10 @@ def about():
 def what():
     return render_template("what.html")
 
-@app.route("/contact")
+@app.route("/contact", methods=["GET", "POST"])
 def contact():
+    if request.method=="POST":
+        # insert data:
+        result = db.execute("INSERT INTO customers (name, email, phone, message) VALUES(:name, :email, :phone, :message)", name=request.form.get("name"), email=request.form.get("email"), phone=request.form.get("phone"), message=request.form.get("message"))
+        return redirect("/contact")
     return render_template("contact.html")
