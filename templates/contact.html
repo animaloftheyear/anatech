@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Contact
+{% endblock %}
+
+{% block main %}
+<p>
+    If you are interesetd in finding out more about what you can benefit from our technology/service, please do not hesitate to getting in touch!
+</p>
+<form action="/contact" method="post" id="contact">
+    <label for="fname">First name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name">
+
+    <label for="lname">Last name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name">
+
+    <label for="email">Your email</label>
+    <input type="text" id="email" name="email" placeholder="Your email address">
+
+    <label for="email">Your telephone number (Optional)</label>
+    <input type="text" id="mobile" name="mobile" placeholder="Your telephone number">
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Your message here" style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
