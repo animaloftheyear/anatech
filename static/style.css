@@ -87,6 +87,7 @@
     position: relative;
     bottom: 0;
     width: 100%;
+    padding-top: 15px;
     color: #33393D;
     text-align: center;
   }
