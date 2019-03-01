@@ -64,6 +64,13 @@
     p {
       font-size: 10px;
     }
+    .navbar {
+      margin: 0px;
+    }
+  
+    .navbar li {
+      padding: 0px 5px 0px 0px;
+    }
    }
 
    .grid-container > .item-group1 {
