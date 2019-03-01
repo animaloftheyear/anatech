@@ -11,14 +11,14 @@
   .navbar li {
     float: right;
     display: block;
-    padding: 10px 10px 20px 10px;
+    padding: 10px 10px 0px 10px;
   }
   .navbar li a {
     color: #9dc8e4;
     text-align: center;
   }
 
-  h1, p {
+  h1, h3, p {
     text-align: center;
     width: 100%;
     color: #33393D;
@@ -32,13 +32,13 @@
     margin: 5px;
    }
 
-   .row {
-     display: flex;
+   .grid-container {
+     display: grid;
+     grid-template-columns: auto auto auto auto;
      height: 300px;
    }
 
-   .row div {
-    width: 25%;
+   .item-group1 {
     height: 300px;
     background-color: #9dc8e4;
     display: flex;
@@ -48,6 +48,14 @@
     margin: 5px;
    }
 
+   .item-group2 {
+    height: 300px;
+    background-color: #9dc8e4;
+    align-items: center;
+    justify-content:center;
+    padding: 10px;
+    margin: 5px;
+   }
    .row div a {
      color: #2AABE4;
      text-decoration: none;
